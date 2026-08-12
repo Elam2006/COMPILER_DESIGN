@@ -1,0 +1,60 @@
+Experiment 6 — Calculator using LEX and YACC
+Aim
+
+To write a program to implement a calculator using FLEX and BISON, supporting arithmetic operations such as +, -, *, and /.
+
+Algorithm
+Start the program.
+Define a regular expression for digits/numbers in FLEX.
+When a number is recognized, store its value in yylval and return the NUM token.
+In BISON, define grammar rules for arithmetic expressions.
+Define operator precedence and associativity.
+Evaluate:
+Addition
+Subtraction
+Multiplication
+Division
+Display an error if the input does not match the grammar.
+Accept an arithmetic expression from the user.
+Evaluate and display the result.
+Stop.
+Pseudocode
+START
+
+Define NUM token
+
+Read arithmetic expression
+
+WHILE input is available:
+    IF input is a number:
+        Store its value
+
+    ELSE IF operator is '+':
+        Add the two operands
+
+    ELSE IF operator is '-':
+        Subtract the second operand
+        from the first operand
+
+    ELSE IF operator is '*':
+        Multiply the operands
+
+    ELSE IF operator is '/':
+        Divide the first operand
+        by the second operand
+
+    ELSE:
+        Display syntax error
+
+Apply operator precedence:
+    * and / before + and -
+
+Display calculated result
+
+STOP
+Grammar used
+E → E + E
+  | E - E
+  | E * E
+  | E / E
+  | NUM
