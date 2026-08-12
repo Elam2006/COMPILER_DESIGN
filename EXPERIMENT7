@@ -1,0 +1,81 @@
+Experiment 7 — Three Address Code Generation
+Aim
+
+To write a program using FLEX and BISON to generate Three Address Code (TAC) for a simple arithmetic expression.
+
+Algorithm
+
+FLEX:
+
+Start the FLEX program.
+Include the required header files.
+Define tokens for:
+Identifiers
+Numbers
+Operators
+Use regular expressions to recognize identifiers and numeric constants.
+Return the recognized tokens to BISON.
+Ignore whitespace and pass other operators directly.
+
+BISON:
+7. Define tokens and operator precedence.
+8. Define grammar rules for arithmetic expressions.
+9. Parse expressions such as a = b + c * d.
+10. Maintain a temporary variable counter starting from t1.
+11. For every arithmetic operation, create a temporary variable.
+12. Generate TAC for each intermediate operation.
+13. Assign the final temporary result to the destination variable.
+14. Display the generated three-address code.
+15. Stop.
+
+Pseudocode
+START
+
+Initialize temporary variable counter = 1
+
+Define tokens:
+    ID
+    NUM
+    +, -, *, /
+    =
+
+Read arithmetic expression
+
+Tokenize input using FLEX
+
+Pass tokens to BISON
+
+Parse the expression according to grammar
+
+IF expression contains an operation:
+
+    IF operation is addition:
+        Create temporary t1
+        Generate:
+            t1 = operand1 + operand2
+
+    ELSE IF operation is subtraction:
+        Create temporary
+        Generate:
+            t = operand1 - operand2
+
+    ELSE IF operation is multiplication:
+        Create temporary
+        Generate:
+            t = operand1 * operand2
+
+    ELSE IF operation is division:
+        Create temporary
+        Generate:
+            t = operand1 / operand2
+
+    Increment temporary counter
+
+Continue until complete expression is parsed
+
+Assign final temporary result:
+    destination = temporary
+
+Display generated Three Address Code
+
+STOP
