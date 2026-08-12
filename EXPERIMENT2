@@ -1,0 +1,65 @@
+Experiment 2 — Lexical Analyzer using LEX
+Aim
+
+To create a lexical analyzer that reads a C source code file and identifies keywords, identifiers, constants, operators, preprocessor directives, header files, and delimiters using FLEX and regular expressions.
+
+Algorithm
+Start the program.
+Define regular expressions for different types of tokens.
+Create the three sections of the FLEX file:
+Definitions
+Rules
+C code
+Define patterns for keywords, identifiers, numbers, operators, and delimiters.
+Define rules to recognize preprocessor directives and header files.
+Read the C source file.
+Match each input lexeme with the appropriate pattern.
+Print the corresponding token type.
+Continue until the end of the file.
+Stop.
+Pseudocode
+START
+
+Define patterns for:
+    Keywords
+    Identifiers
+    Numbers
+    Operators
+    Delimiters
+    Preprocessor directives
+    Header files
+
+Read C source program
+
+WHILE input is not finished:
+    Read next lexeme
+
+    IF lexeme is a keyword:
+        Print "Keyword"
+
+    ELSE IF lexeme is an identifier:
+        Print "Identifier"
+
+    ELSE IF lexeme is a number:
+        Print "Number"
+
+    ELSE IF lexeme is an operator:
+        Print "Operator"
+
+    ELSE IF lexeme is a delimiter:
+        Print "Delimiter"
+
+    ELSE IF lexeme is a preprocessor directive:
+        Print "Preprocessor Directive"
+
+    ELSE IF lexeme is a header file:
+        Print "Header File"
+
+    ELSE:
+        Ignore lexeme
+
+END WHILE
+
+Print "End of file"
+
+STOP
