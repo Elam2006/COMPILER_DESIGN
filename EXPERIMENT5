@@ -1,0 +1,75 @@
+Experiment 5 — C Control Structure Syntax
+Aim
+
+To write a program to recognize valid control structure syntax of C, such as for, while, if-else, if-else-if, and switch-case, using FLEX and BISON.
+
+Algorithm
+
+FLEX:
+
+Start the FLEX program.
+Define tokens for control keywords:
+if
+else
+for
+while
+switch
+case
+default
+Define patterns for identifiers and numbers.
+Define tokens for braces, parentheses, colon, semicolon, and relational operators.
+Pass the recognized tokens to BISON.
+
+BISON:
+6. Define grammar rules for:
+
+if
+if-else
+while
+for
+switch-case
+Define grammar rules for conditions and relational operators.
+Start parsing using yyparse().
+If the input matches the grammar, print Valid control structure syntax.
+Otherwise, report Invalid control structure syntax.
+Stop.
+Pseudocode
+START
+
+Define tokens:
+    IF, ELSE, FOR, WHILE
+    SWITCH, CASE, DEFAULT
+    ID, NUM
+    Braces, Parentheses, Colon, Semicolon
+    Relational operators
+
+Read C control structure
+
+Identify tokens using FLEX
+
+Pass tokens to BISON
+
+Check grammar:
+
+IF input is IF statement:
+    Validate condition and statement
+
+ELSE IF input is IF-ELSE:
+    Validate condition and both statements
+
+ELSE IF input is WHILE:
+    Validate condition and loop body
+
+ELSE IF input is FOR:
+    Validate initialization, condition,
+    increment/decrement and body
+
+ELSE IF input is SWITCH:
+    Validate case/default structure
+
+IF grammar is valid:
+    Print "Valid control structure syntax"
+ELSE:
+    Print "Invalid control structure syntax"
+
+STOP
