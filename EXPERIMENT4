@@ -1,0 +1,48 @@
+Experiment 4 — Valid Variable Recognition
+Aim
+
+To write a program to recognize a valid variable which starts with a letter followed by any number of letters or digits using FLEX and BISON.
+
+Algorithm
+
+FLEX:
+
+Start the FLEX program.
+Define patterns for letters and digits.
+Return LET when a letter is recognized.
+Return DIG when a digit is recognized.
+Pass the tokens to BISON.
+
+BISON:
+6. Define the tokens LET and DIG.
+7. Define grammar rules for a valid variable.
+8. The first character must be a letter.
+9. Subsequent characters can be letters or digits.
+10. Start parsing using yyparse().
+11. If the input matches the grammar, print Valid variable.
+12. Otherwise, print Invalid variable.
+13. Stop.
+
+Pseudocode
+START
+
+Define:
+    LET = letter
+    DIG = digit
+
+Read variable name
+
+IF first character is not a letter:
+    Print "Invalid variable"
+    STOP
+
+FOR each remaining character:
+    IF character is a letter OR digit:
+        Continue
+    ELSE:
+        Print "Invalid variable"
+        STOP
+
+Print "Valid variable"
+
+STOP
