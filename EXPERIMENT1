@@ -1,0 +1,59 @@
+Experiment 1 — Lexical Analyzer with Symbol Table
+Aim
+
+To develop a lexical analyzer using FLEX to recognize tokens such as identifiers, constants, comments, and operators in a C program and to create a symbol table while recognizing identifiers.
+
+Algorithm
+Start the program.
+Include the required header files.
+Define regular expressions for:
+Identifiers
+Constants
+Comments
+Operators
+Declare a symbol table containing identifier names and types.
+Define FLEX rules to recognize each token.
+When an identifier is recognized, search the symbol table.
+If the identifier is not present, insert it into the symbol table.
+Print the recognized tokens.
+Open the input C file and call yylex().
+Display the symbol table.
+Stop.
+Pseudocode
+START
+
+Initialize symbol table
+
+Define patterns:
+    Identifier
+    Constant
+    Comment
+    Operator
+
+Read input C program
+
+WHILE input is not finished:
+    Get next token
+
+    IF token is Identifier:
+        IF identifier is not in symbol table:
+            Insert identifier
+        Print "Identifier"
+
+    ELSE IF token is Constant:
+        Print "Constant"
+
+    ELSE IF token is Comment:
+        Print "Comment"
+
+    ELSE IF token is Operator:
+        Print "Operator"
+
+    ELSE:
+        Ignore token
+
+END WHILE
+
+Display symbol table
+
+STOP
