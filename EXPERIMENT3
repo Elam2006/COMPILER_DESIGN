@@ -1,0 +1,61 @@
+Experiment 3 — Valid Arithmetic Expression
+Aim
+
+To write a program to recognize a valid arithmetic expression using the operators +, -, *, and / using FLEX and BISON.
+
+Algorithm
+
+FLEX:
+
+Start the FLEX program.
+Include the required header files.
+Define regular expressions for identifiers, digits, and operators.
+Return the appropriate tokens to BISON.
+Ignore whitespace.
+Return the end-of-input indication using yywrap().
+
+BISON:
+7. Define the required tokens.
+8. Define operator associativity and precedence.
+9. Define grammar rules for arithmetic expressions.
+10. Call yyparse() to begin parsing.
+11. If the input matches the grammar, recognize it as a valid expression.
+12. If no grammar rule matches, call yyerror() and report an invalid expression.
+13. Stop.
+
+Pseudocode
+START
+
+FLEX:
+    Define tokens:
+        ID
+        DIGIT
+        Operators
+
+    Read input expression
+
+    Convert lexemes into tokens
+    Pass tokens to BISON
+
+BISON:
+    Define grammar:
+
+    Expression → Expression + Expression
+               | Expression - Expression
+               | Expression * Expression
+               | Expression / Expression
+               | - Expression
+               | ( Expression )
+               | DIGIT
+               | ID
+
+    Set operator precedence
+
+    Start parsing
+
+    IF expression matches grammar:
+        Print "Valid Expression"
+    ELSE:
+        Print "Invalid Expression"
+
+STOP
